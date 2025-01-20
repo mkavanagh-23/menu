@@ -116,7 +116,7 @@ return {
       -- Get the dimensions of the current window and calculate the center position
       local width = vim.o.columns
       local height = vim.o.lines
-      local win_width = 80  -- Width of the floating window
+      local win_width = 120  -- Width of the floating window
       local win_height = 30 -- Height of the floating window
       local col = math.floor((width - win_width) / 2)
       local row = math.floor((height - win_height) / 2)
