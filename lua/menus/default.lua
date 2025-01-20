@@ -1,6 +1,6 @@
 return {
   {
-    name = "Format Buffer",
+    name = "󰛘  Format Buffer",
     cmd = function()
       local ok, conform = pcall(require, "conform")
 
@@ -14,7 +14,7 @@ return {
   },
 
   {
-    name = "Code Actions",
+    name = "  Code Actions",
     cmd = vim.lsp.buf.code_action,
     rtxt = "󱁐ca",
   },
@@ -30,12 +30,12 @@ return {
   { name = "separator" },
 
   {
-    name = "Copy Content",
+    name = "  Copy Content",
     cmd = "%y+",
   },
 
   {
-    name = "Delete Content",
+    name = "󰆴  Delete Content",
     cmd = "%d",
   },
 
@@ -111,7 +111,7 @@ return {
   { name = "separator" },
 
   {
-    name = "Find & Replace",
+    name = "󰛔 Find & Replace",
     cmd = function()
       -- Get the dimensions of the current window and calculate the center position
       local width = vim.o.columns
@@ -155,13 +155,13 @@ return {
   { name = "separator" },
 
   {
-    name = "Undo Tree",
+    name = " Undo Tree",
     cmd = vim.cmd.UndotreeToggle,
-    rtxt = "ut",
+    rtxt = "󱁐ut",
   },
 
   {
-    name = "Highlight Section",
+    name = "󱩌 Highlight Section",
     cmd = function()
       vim.cmd("Twilight")
     end,
