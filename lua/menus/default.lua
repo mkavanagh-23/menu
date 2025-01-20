@@ -162,7 +162,7 @@ return {
   {
     name = "Zen Mode",
     cmd = function()
-      vim.cmd(ZenMode)
+      vim.cmd("ZenMode")
     end,
   },
 }
