@@ -26,9 +26,7 @@ return {
 
   {
     name = "Show References",
-    cmd = function()
-      require('telescope.builtin').lsp_references()
-    end,
+    cmd = vim.lsp.buf.references,
     rtxt = "gr",
   },
 
