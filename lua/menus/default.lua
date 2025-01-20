@@ -168,13 +168,13 @@ return {
 
   {
     name = "Find Files",
-    cmd = builtin.find_files,
+    cmd = find_files,
     rtxt = "ff",
   },
 
   {
     name = "Find Buffers",
-    cmd = builtin.buffers,
+    cmd = buffers,
     rtxt = "fb",
   },
 
@@ -202,7 +202,7 @@ return {
 
   {
     name = "Help",
-    cmd = builtin.help_tags,
+    cmd = help_tags,
     rtxt = "fh",
   },
 }
