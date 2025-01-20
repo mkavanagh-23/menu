@@ -46,13 +46,6 @@ return {
     cmd = "%d",
   },
 
-  {
-    name = "Emoji Picker",
-    cmd = function()
-      vim.cmd("Telescope emoji")
-    end
-  },
-
   { name = "separator" },
 
   {
@@ -166,26 +159,7 @@ return {
     rtxt = "󱁐find",
   },
 
-  {
-    name = "Find Files",
-    cmd = find_files,
-    rtxt = "ff",
-  },
-
-  {
-    name = "Find Buffers",
-    cmd = buffers,
-    rtxt = "fb",
-  },
-
   { name = "separator" },
-
-  {
-    name = "Clipboard",
-    cmd = function ()
-      vim.cmd("Telescope neoclip")
-    end
-  },
 
   {
     name = "Undo Tree",
@@ -198,11 +172,5 @@ return {
     cmd = function()
       vim.cmd("Twilight")
     end
-  },
-
-  {
-    name = "Help",
-    cmd = help_tags,
-    rtxt = "fh",
   },
 }
