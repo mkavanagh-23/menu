@@ -39,14 +39,6 @@ return {
     cmd = "%d",
   },
 
-  {
-    name = "Emoji Picker",
-    cmd = function ()
-      vim.cmd("Telescope emoji")
-    end,
-    rtxt = "ef"
-  },
-
   { name = "separator" },
 
   {
@@ -166,14 +158,6 @@ return {
     name = "Undo Tree",
     cmd = vim.cmd.UndotreeToggle,
     rtxt = "ut",
-  },
-
-  {
-    name = "Clipboard",
-    cmd = function ()
-      vim.cmd("Telescope neoclip")
-    end,
-    rtxt = "hs",
   },
 
   {
