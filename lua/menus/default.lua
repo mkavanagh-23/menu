@@ -1,6 +1,12 @@
 return {
 
   {
+    name = "Inspect",
+    cmd = Inspect,
+
+  },
+
+  {
     name = "Format Buffer",
     cmd = function()
       local ok, conform = pcall(require, "conform")
@@ -8,16 +14,16 @@ return {
       if ok then
         conform.format { lsp_fallback = true }
       else
-        vim.lsp.buf.format()
+        vim.lsp.buf.format({ async = true })
       end
     end,
-    rtxt = "<leader>fm",
+    rtxt = "󱁐fmt",
   },
 
   {
     name = "Code Actions",
     cmd = vim.lsp.buf.code_action,
-    rtxt = "<leader>ca",
+    rtxt = "󱁐ca",
   },
 
   { name = "separator" },
@@ -31,25 +37,13 @@ return {
   { name = "separator" },
 
   {
-    name = "Edit Config",
-    cmd = function()
-      vim.cmd "tabnew"
-      local conf = vim.fn.stdpath "config"
-      vim.cmd("tcd " .. conf .. " | e init.lua")
-    end,
-    rtxt = "ed",
-  },
-
-  {
     name = "Copy Content",
     cmd = "%y+",
-    rtxt = "<C-c>",
   },
 
   {
     name = "Delete Content",
     cmd = "%d",
-    rtxt = "dc",
   },
 
   { name = "separator" },
@@ -64,22 +58,8 @@ return {
 
       local cmd = "cd " .. old_buf_dir
 
-      -- base46_cache var is an indicator of nvui user!
-      if vim.g.base46_cache then
-        require("nvchad.term").new { cmd = cmd, pos = "sp" }
-      else
-        vim.cmd "enew"
-        vim.fn.termopen { vim.o.shell, "-c", cmd .. " ; " .. vim.o.shell }
-      end
-    end,
-  },
-
-  { name = "separator" },
-
-  {
-    name = "  Color Picker",
-    cmd = function()
-      require("minty.huefy").open()
+      vim.cmd "enew"
+      vim.fn.termopen { vim.o.shell, "-c", cmd .. " ; " .. vim.o.shell }
     end,
   },
 }

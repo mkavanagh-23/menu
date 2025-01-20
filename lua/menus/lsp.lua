@@ -1,6 +1,12 @@
 return {
 
   {
+    name = "More Details",
+    cmd = vim.lsp.buf.hover,
+    rtxt = "󰘶K"
+  },
+
+  {
     name = "Goto Definition",
     cmd = vim.lsp.buf.definition,
     rtxt = "gd",
@@ -16,26 +22,6 @@ return {
     name = "Goto Implementation",
     cmd = vim.lsp.buf.implementation,
     rtxt = "gi",
-  },
-
-  { name = "separator" },
-
-  {
-    name = "Show signature help",
-    cmd = vim.lsp.buf.signature_help,
-    rtxt = "<leader>sh",
-  },
-
-  {
-    name = "Add workspace folder",
-    cmd = vim.lsp.buf.add_workspace_folder,
-    rtxt = "<leader>wa",
-  },
-
-  {
-    name = "Remove workspace folder",
-    cmd = vim.lsp.buf.remove_workspace_folder,
-    rtxt = "<leader>wr",
   },
 
   {
@@ -54,15 +40,21 @@ return {
       if ok then
         conform.format { lsp_fallback = true }
       else
-        vim.lsp.buf.format()
+        vim.lsp.buf.format({ async = true })
       end
     end,
-    rtxt = "<leader>fm",
+    rtxt = "󱁐fmt",
   },
 
   {
     name = "Code Actions",
     cmd = vim.lsp.buf.code_action,
-    rtxt = "<leader>ca",
+    rtxt = "󱁐ca",
+  },
+
+  {
+    name = "Rename Buffer",
+    cmd = vim.lsp.buf.rename,
+    rtxt = "󱁐rn"
   },
 }
