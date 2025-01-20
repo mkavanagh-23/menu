@@ -55,7 +55,7 @@ return {
   },
 
   {
-    name = "Rename Buffer",
+    name = "Rename",
     cmd = vim.lsp.buf.rename,
     rtxt = "󱁐rn"
   },

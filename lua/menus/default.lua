@@ -1,11 +1,4 @@
 return {
-
-  {
-    name = "Inspect",
-    cmd = Inspect,
-
-  },
-
   {
     name = "Format Buffer",
     cmd = function()
@@ -44,6 +37,14 @@ return {
   {
     name = "Delete Content",
     cmd = "%d",
+  },
+
+  {
+    name = "Emoji Picker",
+    cmd = function ()
+      vim.cmd("Telescope emoji")
+    end,
+    rtxt = "ef"
   },
 
   { name = "separator" },
@@ -164,13 +165,21 @@ return {
   {
     name = "Undo Tree",
     cmd = vim.cmd.UndotreeToggle,
-    rtxt = "ut"
+    rtxt = "ut",
+  },
+
+  {
+    name = "Clipboard",
+    cmd = function ()
+      cim.cmd("Telescope neoclip")
+    end,
+    rtxt = "hs",
   },
 
   {
     name = "Highlight Section",
     cmd = function()
       vim.cmd("Twilight")
-    end
+    end,
   },
 }
