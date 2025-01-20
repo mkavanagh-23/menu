@@ -171,7 +171,7 @@ return {
   {
     name = "Clipboard",
     cmd = function ()
-      cim.cmd("Telescope neoclip")
+      vim.cmd("Telescope neoclip")
     end,
     rtxt = "hs",
   },
