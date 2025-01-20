@@ -58,7 +58,8 @@ return {
       vim.api.nvim_buf_set_option(buf, 'filetype', 'terminal')
       vim.cmd('startinsert') -- Start insert mode for the terminal
       vim.wo.winbar = '' -- Disable winbar in the terminal
-    end
+    end,
+    rtxt = "󱁐find",
   },
 
   {
@@ -144,7 +145,8 @@ return {
           if exit_code ~= 0 then
             print("Terminal job failed!")
           end
-        end
+        end,
+        rtxt = "󱁐sm",
       })
 
       -- Set the window height as per the requirement
@@ -153,5 +155,12 @@ return {
       vim.cmd('startinsert') -- Start insert mode for the terminal
       vim.wo.winbar = ''     -- Disable winbar in the terminal
     end,
+  },
+
+  { name = "separator" },
+
+  {
+    name = "Zen Mode",
+    cmd = ZenMode,
   },
 }
